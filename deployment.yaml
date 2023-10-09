@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-aks-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-aks-app
+  template:
+    metadata:
+      labels:
+        app: my-aks-app
+    spec:
+      containers:
+      - name: my-aks-app
+        image: testmartinho.azurecr.io/test-aks:latest
+        ports:
+        - containerPort: 80
+          name: http
+      imagePullSecrets:
+        - name: acr-secret
