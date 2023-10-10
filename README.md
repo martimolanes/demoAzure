@@ -1,7 +1,7 @@
 ## Demo
 
 1. Create flask helloWorld app
-2. Contaneirized in docker
+2. Containerized in docker
 3. Upload image -> AzureContainerRegistry
 4. Create Azure Kubernetes Service
 5. Deploy 2 k8s pods of our webapp with a LoadBalancer
@@ -15,7 +15,7 @@ python app.py
 # access by http://localhost:80
 ```
 
-### Contaneirized in docker
+### Containerized in docker
 ```bash
 sudo docker build -t my-aks-app .
 ```
